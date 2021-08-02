@@ -17,7 +17,7 @@ io.on('connection', client => {
   }, 500);
   setInterval(() => {
    
-      var randomint = Math.random()*10;
+      var randomint = Math.floor(Math.random()*10);
       client.emit('randomint', {
         randomint
       });
