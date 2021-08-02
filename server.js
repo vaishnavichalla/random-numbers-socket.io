@@ -15,6 +15,14 @@ io.on('connection', client => {
       });
   
   }, 500);
+  setInterval(() => {
+   
+      var randomint = Math.random()*10;
+      client.emit('randomint', {
+        randomint
+      });
+  
+  }, 500);
 
 });
 const port = process.env.PORT || 5000;
